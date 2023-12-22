@@ -5,11 +5,11 @@ import { OktaAuth, toRelativeUrl } from '@okta/okta-auth-js';
 import Home from './Home';
 import Login from './Login';
 import Protected from './Protected';
-import config from './config';
+import oktaConfig from './config';
 import './App.css';
 import queryString from 'query-string';
 
-const oktaAuth = new OktaAuth(config.oidc);
+const oktaAuth = new OktaAuth(oktaConfig.oidc);
 
 const App = () => {
   useEffect(() => {

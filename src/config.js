@@ -1,4 +1,4 @@
-export default oktaConfig = {
+const oktaConfig = {
     oidc: {
         issuer: 'https://trial-1069723.okta.com',
         clientId: '0oa9v5ns4pUt1hWoX697',
@@ -15,3 +15,5 @@ export default oktaConfig = {
         scopes: ['openid', 'profile', 'email'],
     }
 };
+
+export default oktaConfig;

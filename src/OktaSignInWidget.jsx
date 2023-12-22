@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import OktaSignIn from '@okta/okta-signin-widget';
 import './../node_modules/@okta/okta-signin-widget/dist/css/okta-sign-in.min.css';
-import config from './config';
+import oktaConfig from './config';
 
 const OktaSignInWidget = ({ onSuccess, onError }) => {
     const widgetRef = useRef();
@@ -10,7 +10,7 @@ const OktaSignInWidget = ({ onSuccess, onError }) => {
             return false;
         }
 
-        const widget = new OktaSignIn(config.widget);
+        const widget = new OktaSignIn(oktaConfig.widget);
 
         // Search for URL Parameters to see if a user is being routed to the application to recover password
         var searchParams = new URL(window.location.href).searchParams;
